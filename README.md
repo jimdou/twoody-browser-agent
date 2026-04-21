@@ -1,4 +1,4 @@
-# Twoody Browser
+# Twoody Browser Agent
 
 HTTP sidecar that drives browser sessions for Twoody.
 

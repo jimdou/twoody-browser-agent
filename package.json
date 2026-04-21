@@ -1,5 +1,5 @@
 {
-  "name": "@twoody/browser",
+  "name": "@twoody/browser-agent",
   "version": "0.1.0",
   "description": "Twoody browser agent with Browserbase and local Playwright providers.",
   "license": "Apache-2.0",

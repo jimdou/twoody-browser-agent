@@ -1,4 +1,4 @@
-// Twoody Browser — browser automation sidecar.
+// Twoody Browser Agent — browser automation sidecar.
 //
 // Providers:
 //   BROWSER_PROVIDER=browserbase       Browserbase + Stagehand
@@ -111,10 +111,10 @@ const missing = [
 
 if (missing.length) {
   console.warn(
-    `[twoody-browser] MISSING ENV: ${missing.join(", ")} — protected calls will fail until set.`
+    `[twoody-browser-agent] MISSING ENV: ${missing.join(", ")} — protected calls will fail until set.`
   );
 }
 
 app.listen(PORT, () => {
-  console.log(`[twoody-browser] ${provider.name} listening on :${PORT}`);
+  console.log(`[twoody-browser-agent] ${provider.name} listening on :${PORT}`);
 });
