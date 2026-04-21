@@ -91,19 +91,29 @@ returns a clear `501` for those calls until a local Stagehand runner is wired.
 ## Smoke Test
 
 ```bash
-BROWSER_PROVIDER=playwright-local \
-BROWSER_AGENT_SECRET=test \
-BROWSER_AGENT_PORT=4310 \
-node server.js
-
-curl http://127.0.0.1:4310/health
-curl -i -X POST http://127.0.0.1:4310/v1/sessions
-curl -i -X POST -H 'Authorization: Bearer test' http://127.0.0.1:4310/v1/sessions
+BROWSER_PROVIDER=playwright-local npm run smoke
 ```
 
-The last command requires the Playwright Chromium binary. If it has not been
-installed yet, run:
+The smoke test boots the HTTP server, creates a local session, navigates to
+`https://example.com`, captures a screenshot, then closes the session.
+
+It requires the Playwright Chromium binary. If it has not been installed yet,
+run:
 
 ```bash
 npx playwright install chromium
 ```
+
+## Provider Contract
+
+Every provider must expose the same async methods:
+
+- `createSession()`
+- `closeSession(sessionId)`
+- `navigate(sessionId, { url })`
+- `observe(sessionId, payload)`
+- `act(sessionId, payload)`
+- `screenshot(sessionId, { full_page? })`
+- `goal(sessionId, { goal, max_steps? })`
+
+This contract is asserted at startup so provider regressions fail early.
