@@ -31,9 +31,22 @@ For the local Playwright provider, install Chromium once:
 npx playwright install chromium
 ```
 
+The shipped Docker image already contains the Playwright browser runtime, so
+`playwright-local` works in containers without an extra browser-install step.
+
 ## License
 
 Apache 2.0. See [LICENSE](LICENSE).
+
+## Docker
+
+```bash
+docker build -t twoody-browser-agent .
+docker run --rm -p 3100:3100 \
+  -e BROWSER_AGENT_SECRET=test \
+  -e BROWSER_PROVIDER=playwright-local \
+  twoody-browser-agent
+```
 
 Health:
 
