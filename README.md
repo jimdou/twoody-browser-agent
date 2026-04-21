@@ -5,6 +5,9 @@ HTTP sidecar that drives browser sessions for Twoody.
 The private Rails backend and the self-hosted local-server both talk to this
 service over the same bearer-protected HTTP contract.
 
+For repository-specific development context, conventions, and architecture
+notes, see [AGENTS.md](AGENTS.md).
+
 ## Providers
 
 Set `BROWSER_PROVIDER`:
