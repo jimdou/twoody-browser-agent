@@ -1,0 +1,21 @@
+{
+  "name": "@twoody/browser",
+  "version": "0.1.0",
+  "description": "Twoody browser agent with Browserbase and local Playwright providers.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@browserbasehq/stagehand": "^1.11.0",
+    "express": "^4.19.2",
+    "playwright": "^1.52.0",
+    "zod": "^3.23.8"
+  }
+}
