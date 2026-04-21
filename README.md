@@ -28,6 +28,10 @@ For the local Playwright provider, install Chromium once:
 npx playwright install chromium
 ```
 
+## License
+
+Apache 2.0. See [LICENSE](LICENSE).
+
 Health:
 
 ```bash
