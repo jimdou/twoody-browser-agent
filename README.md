@@ -1,5 +1,7 @@
 # Twoody Browser Agent
 
+Part of [Twoody Local](https://twoody.com/local) — the open-source, self-hosted edition of Twoody.
+
 HTTP sidecar that drives browser sessions for Twoody.
 
 The private Rails backend and the self-hosted local-server both talk to this
